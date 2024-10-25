@@ -1,0 +1,106 @@
+/* พื้นหลังแบบ Gradient */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* คอนเทนเนอร์ */
+.container {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    max-height: 80vh;
+    overflow-y: auto;
+    width: 80%;
+    margin-top: 20px;
+}
+
+/* หัวข้อ */
+h1 {
+    margin-bottom: 10px;
+    font-size: 2.5em;
+    color: #343a40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 i {
+    margin-right: 10px;
+    color: #ff6f61;
+}
+
+/* คำอธิบายสั้น */
+p {
+    margin-bottom: 30px;
+    font-size: 1.2em;
+    color: #6c757d;
+}
+
+/* ตารางช่องจอด */
+.parking-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+/* ช่องจอด */
+.parking-slot {
+    background-color: #6c757d;
+    color: white;
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 1.3em;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.parking-slot i {
+    font-size: 2.5em;
+    margin-top: 10px;
+    color: white;
+}
+
+/* เมื่อโฮเวอร์ */
+.parking-slot:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* สถานะช่องจอด */
+.parking-slot.occupied {
+    background-color: #ff4444;
+    color: white;
+    border: 2px solid #ffcccc;
+    animation: pulse 1s infinite;
+}
+
+.parking-slot.available {
+    background-color: #28a745;
+    color: white;
+    border: 2px solid #ccffcc;
+}
+
+/* ขอบและเงารอบๆ */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 0, 0, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+    }
+}

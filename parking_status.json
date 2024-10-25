@@ -1,0 +1,14 @@
+[
+    {
+        "id": 3,
+        "occupied": true
+    },
+    {
+        "id": 2,
+        "occupied": true
+    },
+    {
+        "id": 1,
+        "occupied": true
+    }
+]
